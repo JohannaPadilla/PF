@@ -6,7 +6,7 @@ function panelInicio() {
                                 <p class="text-saludo">Bienvenidos a</p>
                                 <img class="img-logo" src="img/Logo.PNG" alt="Icono que dice Thank You"/>
                                 <div>
-                                  <button class="boton boton-saludo" type="button" id="cerrar">ENTRAR</button>
+                                  <button class="boton-saludo" type="button" id="cerrar">ENTRAR</button>
                                 </div>
                               </div>
                             </div>`;
@@ -433,5 +433,36 @@ function panelInicio() {
       .addEventListener("click", guardarCambios);
   }
   
+  // Ver detalles de los tipos de paquetes
+const seccion = document.querySelector(".envios");
+if(seccion.innerHTML === ''){
+  function verJSON() {
+  const main = document.querySelector("main");
+  const seccion = document.createElement("section");
+  fetch("http://localhost:3000/tipo")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((tipoEnvio) => {
+        const contenedor = document.createElement("div");
+        contenedor.innerHTML = `<div><h2 class="h2-tipos">${tipoEnvio.nombre}</h2>
+                                  <div class="div-tipos">
+                                    <div>
+                                      <img class="img-tipos" src="${tipoEnvio.imagen}" alt="${tipoEnvio.detalle}">
+                                    </div>
+                                    <div>
+                                      <p class="p-tipos"><strong>Detalles del tipo de paquete: </strong>${tipoEnvio.dimension}</p>
+                                    </div>
+                                  </div>
+                                </div>`;  
+        contenedor.className = "tarj-datos div-tipos";
+        seccion.appendChild(contenedor);
+      })
+      seccion.className = "envios area-datos";
+      main.appendChild(seccion);
+    })
+}
+verJSON();
+}
+
   
   

@@ -1,0 +1,7 @@
+{
+  "tipo": [
+    { "id": 1, "nombre": "CARTA", "dimension": "21,6 x 27,9 cm", "imagen": "img/carta.png","detalle":"Sobre tamaño carta para envios"},
+    { "id": 2, "nombre": "SOBRE", "dimension": "30 x 20 cm","imagen": "img/sobre.jpg","detalle":"Sobre tamaño A4 para envios"},
+    { "id": 3, "nombre": "CAJA", "dimension": "60 x 40 x 40 cm", "imagen": "img/caja.jpg","detalle":"Caja para envios"}
+  ]
+}

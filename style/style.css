@@ -37,13 +37,18 @@
 }
 .img-logo {
   width: 25vw;
-  border-radius: 50em;
+  border-radius: 1vw;
+  margin-bottom: 2vw;
 }
 .boton-saludo {
-  margin-top: 1.5vh;
   font-size: 3vw;
   padding: 0 1vw;
   border-radius: 10px;
+  color: var(--color-principal);
+  border: 1px solid var(--color-secundario);
+  border-radius: 10px;
+  box-shadow: 2px 2px var(--color-cuaternario);
+  background-color: transparent;
 }
 .boton-saludo:hover {
   background-color: var(--color-secundario);
@@ -68,7 +73,7 @@ nav {
   color: var(--color-principal);
   font-size: x-large;
   border: none;
-  margin: 5px;
+  margin-bottom: 1vw;
   background-color: transparent;
   border-radius: 10px;
   box-shadow: 2px 2px var(--color-cuaternario);
@@ -301,6 +306,25 @@ p {
   box-shadow: 2px 2px var(--color-terciario);
 }
 /* Fin cuadro de envios */
+
+/* Tipos de envio */
+.div-tipos{
+  text-align: center;
+  display: flex;
+  height: 100%;
+}
+.h2-tipos{
+  background-color: var(--color-terciario);
+}
+.img-tipos{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px #24242460;
+}
+.p-tipos{
+  font-size: small;
+}
+/* Fin tipos de envio */
 
 /* BreackPoint */
 @media (min-width: 640px) {
