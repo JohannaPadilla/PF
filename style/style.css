@@ -1,0 +1,335 @@
+/* Generales */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+:root {
+  --color-principal: #242424;
+  --color-secundario: #cbe4a5;
+  --color-terciario: #8784c2;
+  --color-cuaternario: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+/* Fin Generales */
+
+/* Panel de Inicio */
+.saludo {
+  background-color: var(--color-terciario);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: auto;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+}
+.text-saludo {
+  font-size: 6vw;
+  color: var(--color-principal);
+}
+.img-logo {
+  width: 25vw;
+  border-radius: 50em;
+}
+.boton-saludo {
+  margin-top: 1.5vh;
+  font-size: 3vw;
+  padding: 0 1vw;
+  border-radius: 10px;
+}
+.boton-saludo:hover {
+  background-color: var(--color-secundario);
+}
+/* Fin Panel de Inicio */
+
+/* Navbar */
+nav {
+  background-color: var(--color-terciario);
+  font-family: "Bebas Neue", cursive;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+}
+.img-logo-inicio {
+  margin: 1vh;
+}
+.boton {
+  padding: 0;
+  color: var(--color-principal);
+  font-size: x-large;
+  border: none;
+  margin: 5px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 2px 2px var(--color-cuaternario);
+  background-color: var(--color-secundario);
+}
+.boton:hover {
+  background-color: var(--color-cuaternario);
+  box-shadow: 2px 2px var(--color-secundario);
+  border-radius: 10px;
+}
+.boton::before {
+  content: " - ";
+}
+.boton::after {
+  content: " - ";
+}
+.tit-navbar {
+  font-size: 3vw;
+  color: var(--color-principal);
+  margin: 0;
+}
+.tit-botones {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+/* Fin Navbar */
+
+/* Acerca */
+.acerca {
+  margin: 1vw 3vh;
+  text-align: center;
+  border-radius: 10px;
+}
+h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 10vw;
+  margin-top: 0.5vw;
+}
+.parrafo-acerca {
+  padding: 1vw;
+}
+.text-acerca {
+  text-align: center;
+  background-color: var(--color-secundario);
+}
+.p-acerca {
+  font-size: 4vw;
+}
+/* Fin Acerca */
+
+/* Formulario */
+.form-datos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  text-align: center;
+  background-color: var(--color-principal);
+  color: var(--color-principal);
+}
+.form-fondo {
+  background-color: var(--color-secundario);
+  width: 40vw;
+  height: 95vh;
+  border-radius: 10px;
+}
+.cont-form {
+  height: 80vh;
+}
+form {
+  width: 30%;
+  font-weight: bold;
+}
+form legend {
+  font-weight: bold;
+  font-size: 2vw;
+  margin-top: 1.5vh;
+  text-decoration: underline;
+  text-align: center;
+}
+form ol {
+  list-style: none;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+form ol li {
+  margin-top: 2vh;
+}
+form ol li label,
+.titulo {
+  font-size: 1.5vw;
+  text-align: center;
+  margin-bottom: 0.1em;
+}
+input[type="text"],
+.opciones {
+  border: 1px solid var(--color-principal);
+  border-radius: 10px;
+  font-size: 0.8vw;
+  height: 3.5vh;
+  text-align: center;
+  background-color: var(--color-cuaternario);
+  box-shadow: 3px 3px var(--color-principal);
+}
+.box-lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.box-selector {
+  display: flex;
+  margin: 0.3vw;
+  flex-direction: column;
+}
+.titulo {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+}
+.box-selector div label {
+  font-size: medium;
+}
+.radios {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20vw;
+  border: 1px solid var(--color-principal);
+  border-radius: 10px;
+  padding: 0.3em;
+  color: var(--color-principal);
+  box-shadow: 3px 3px var(--color-principal);
+  background-color: var(--color-cuaternario);
+}
+.box-selector div label {
+  font-size: 1vw;
+}
+input[type="radio"] {
+  border-radius: 10px;
+  height: 2vh;
+  padding: 10px;
+  accent-color: #cbe4a5;
+}
+.botones-form {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2.5vh;
+}
+.boton-form {
+  border: none;
+  border-radius: 10px;
+  padding: 0.5em;
+  font-size: 1vw;
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: var(--color-secundario);
+  background-color: var(--color-principal);
+}
+.boton-form:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-principal);
+  border: 1px solid var(--color-principal);
+}
+/* Fin Formulario */
+
+/* Grid de main */
+.area-acerca {
+  grid-area: area-acerca;
+}
+.area-datos {
+  grid-area: area-datos;
+}
+main {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "area-acerca"
+    "area-datos";
+}
+/* Fin grid de amin */
+
+/* Cuadro de envios */
+.envios {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5vw;
+  width: 100%;
+}
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 3vw;
+  text-decoration: underline;
+}
+
+.tarj-datos {
+  background-color: #8784c252;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: 2px solid var(--color-terciario);
+  width: 25%;
+}
+p {
+  font-size: large;
+}
+.boton-eliminar-envios {
+  color: var(--color-terciario);
+  background-color: var(--color-cuaternario);
+  border: 1px solid var(--color-terciario);
+  box-shadow: 2px 2px var(--color-terciario);
+}
+/* Fin cuadro de envios */
+
+/* BreackPoint */
+@media (min-width: 640px) {
+  h1 {
+    font-size: 6vw;
+  }
+  .p-acerca {
+    font-size: 2vw;
+  }
+  .img-logo-inicio {
+    width: 8vw;
+  }
+  nav {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 1800px) {
+  h1 {
+    font-size: 3vw;
+  }
+  .p-acerca {
+    font-size: 1vw;
+  }
+}
+/* Fin BrackPoint */
