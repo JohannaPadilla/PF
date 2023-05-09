@@ -173,8 +173,7 @@ function panelInicio() {
   });
   
 //   Clase consructora de envios
-  class envio {
-    static id = 0;
+ class envio {
     constructor(remitente, origen, destinatario, destino, peso, tipoEnvio, zona) {
       this.remitente = remitente;
       this.origen = origen;
@@ -183,10 +182,17 @@ function panelInicio() {
       this.peso = peso;
       this.tipoEnvio = tipoEnvio;
       this.zona = zona;
-      this.id = envio.id++;
+      this.id = this.generarID();
+    }
+    
+    generarID() {
+      let contador = localStorage.getItem("envioID") || 0;
+      contador++;
+      localStorage.setItem("envioID", contador);
+      return contador;
     }
   }
-  
+
 //   Funciones para agregar datos a los envios
   function precioPorKilo(zona, peso) {
     if (
